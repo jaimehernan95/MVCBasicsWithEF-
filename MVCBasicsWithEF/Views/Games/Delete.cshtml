@@ -1,0 +1,21 @@
+﻿@model MVCBasicsWithEF.Models.Game
+@{
+    ViewData["Title"] = "Game Delete";
+}
+<h2>Game Delete Confirmation</h2>
+
+<table class="table">
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Title)</td>
+        <td>@Html.DisplayFor(model => model.Title)</td>
+    </tr>
+    <tr>
+        <td>@Html.DisplayNameFor(model => model.Year)</td>
+        <td>@Html.DisplayFor(model => model.Year)</td>
+    </tr>
+</table>
+<form asp-action="Delete">
+    <input type="hidden" asp-for="Id" />
+    <input type="submit" value="Delete"/> 
+</form>
+<a asp-action="Index">Back to Game List</a>

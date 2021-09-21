@@ -1,0 +1,20 @@
+﻿@model MVCBasicsWithEF.Models.Game
+@{
+    ViewData["Title"] = "Add Game";
+}
+<h2>Add New Game</h2>
+<form asp-action="Create">
+    <table>
+        <tr>
+            <td><label asp-for="Title"></label></td>
+            <td><input asp-for="Title" /></td>
+        </tr>
+        <tr>
+            <td><label asp-for="Year"></label></td>
+            <td><input asp-for="Year" /></td>
+        </tr>
+    </table>
+
+    <input type="submit" value="Add Game" />
+</form>
+<a asp-action="Index">Back to Game List</a>
